@@ -3,15 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Intro component with sign up form</title>
@@ -30,58 +23,23 @@
         <button><b>Try it free 7 days</b> then $20/mo. thereafter</button>
       </div>
       <div class="form-section">
-        <form action="" method="post">
-          <label>
-            <input
-              type="text"
-              name="firstname"
-              id="firstName"
-              placeholder="First Name"
-            />
-            <p id="errorFirstName" class="error-message">
-              First Name cannot be empty
-            </p>
-          </label>
-          <label>
-            <input
-              type="text"
-              name="lastname"
-              id="lastName"
-              placeholder="Last Name"
-            />
-            <p id="errorLastName" class="error-message">
-              Last Name cannot be empty
-            </p>
-          </label>
-          <label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-            />
-            <p id="errorEmail" class="error-message">
-              Looks like this is not an email
-            </p>
-          </label>
-          <label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-            />
-            <p id="errorPassword" class="error-message">
-              Password cannot be empty
-            </p>
-          </label>
+        <form method="post">
+          <label for="firstName"></label>
+          <input type="text" name="firstname" id="firstName" placeholder="First Name" />
+          <p id="errorFirstName" class="error-message"> First Name cannot be empty</p>
+          <label for="lastName"></label>
+          <input type="text" name="lastname" id="lastName" placeholder="Last Name" />
+          <p id="errorLastName" class="error-message"> Last Name cannot be empty</p>
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="Email Address" />
+          <p id="errorEmail" class="error-message"> Looks like this is not an email</p>
+          <label for="password"></label>
+          <input type="password" name="password" id="password" placeholder="Password" />
+          <p id="errorPassword" class="error-message"> Password cannot be empty</p>
           <p class="input-aria-live sr-only" aria-live="polite"></p>
           <button type="submit" id="submit">Claim your free trial</button>
         </form>
-        <p>
-          By clicking the button, you are agreeing to our
-          <a href="">Terms and Services</a>
-        </p>
+        <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
       </div>
     </main>
     <script src="script.js"></script>
