@@ -4,6 +4,7 @@
   --clr-blue: hsl(248, 32%, 49%);
   --clr-dark-blue: hsl(249, 10%, 26%);
   --clr-grayish-blue: hsl(246, 25%, 77%);
+  --clr-white-gray: hsl(0, 0%, 90%);
   --bs-primary: 0 8px 0 hsla(0, 0%, 0%, 0.1);
   --fs-body: 1em;
   --fs-h1: 1.7em;
@@ -36,15 +37,13 @@ button {
 
 body {
   display: flex;
-  /*height: 100vh;*/
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   background-image: url("images/bg-intro-mobile.png");
   background-size: cover;
   background-color: var(--clr-red);
   text-align: center;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
   padding: 1rem;
 }
 
@@ -62,7 +61,6 @@ main {
   margin-bottom: 1.4rem;
   font-size: var(--fs-h1);
 }
-
 
 .header-section p {
   line-height: 1.6rem;
@@ -100,6 +98,12 @@ main {
   border-radius: var(--br-secondary);
   border: 0;
   box-shadow: 0 4px 0 hsl(154, 59%, 45%);
+  transition: background-color 0.2s ease;
+}
+
+.form-section button:hover {
+  background-color: hsl(154, 59%, 65%);
+  box-shadow: 0 4px 0 hsl(154, 59%, 55%);
 }
 
 .form-section input {
@@ -109,12 +113,42 @@ main {
   color: black;
   font-weight: 700;
   border-radius: var(--br-secondary);
-  border: 1px solid var(--clr-grayish-blue);
+  border: 2px solid var(--clr-white-gray);
+}
+
+.form-section input:focus-visible {
+  outline-color: var(--clr-blue);
 }
 
 .form-section p {
   color: var(--clr-grayish-blue);
   font-size: 0.7em;
+}
+
+.form-section .input-error {
+  border: 2px solid var(--clr-red);
+}
+
+.form-section .error-message {
+  text-align: right;
+  color: var(--clr-red);
+  font-style: italic;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease;
+}
+
+.form-section .show-error {
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: center right 1.5rem;
+}
+
+.form-section .input-aria-live {
+  font-weight: 700;
+  font-size: var(--fs-body);
+  color: black;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 800px) {
