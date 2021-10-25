@@ -84,7 +84,7 @@ main {
 .form-section {
   grid-area: third-box;
   background-color: white;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: var(--br-primary);
   box-shadow: var(--bs-primary);
 }
@@ -186,5 +186,9 @@ main {
 
   .header-section p {
     margin-bottom: 0;
+  }
+
+  .form-section {
+    padding: 3rem;
   }
 }
